@@ -261,3 +261,5 @@ class RBT_PT_Toolkit_Link_Panel(bpy.types.Panel):
         box.label(text = 'Link Proxy')    
         box.operator("toolkit.link_proxy")  
         # =====END=====#
+
+print("hallo masyarakat")
