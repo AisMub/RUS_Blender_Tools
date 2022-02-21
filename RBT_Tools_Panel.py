@@ -23,7 +23,7 @@ class RBT_PT_Modelling_Panel(bpy.types.Panel):
 
 # ========== Ringging ==========#
 class RBT_PT_Ringging_Panel(bpy.types.Panel):
-    bl_label = "ringging"
+    bl_label = "rigging"
     bl_idname = "RBT_PT_Ringging"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
