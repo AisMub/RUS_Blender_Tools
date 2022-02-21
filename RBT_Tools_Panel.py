@@ -36,7 +36,28 @@ class RBT_PT_Ringging_Panel(bpy.types.Panel):
         
         row = layout.row()
         row.operator("rigging.transfer_weight_operator")
+        row.operator("rigging.cleanup_operator")
+
         
+        row = layout.row()
+        row.operator("rigging.add_subdivision_operator")
+
+    #========= class Romove==#
+class RBT_PT_Rigging_Remove_Panel(bpy.types.Panel):
+    bl_label = "Remove"
+    bl_idname = "RBT_PT_Remove_panel"
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'UI'
+    bl_category = "RBT"
+    bl_parent_id = "RBT_PT_Ringging"
+
+    def draw (self, context):
+        layout = self.layout
+        layout.scale_y = 1.3
+        
+        row = layout.row()
+        row.operator("rigging.remove_vertex_group")
+
       
 # ========== Layout ==========#        
 class RBT_PT_Layout_Panel(bpy.types.Panel):

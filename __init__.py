@@ -24,7 +24,7 @@ from .RBT_Tools_Panel import RBT_PT_Compositing_Panel
 from .RBT_Tools_Panel import RBT_PT_Toolkit_Panel
 from .RBT_Tools_Panel import RBT_PT_Toolkit_Link_Panel
 from .RBT_Tools_Panel import RBT_PT_Scale_panel
-
+from .RBT_Tools_Panel import RBT_PT_Rigging_Remove_Panel
 #=====================================================#
 
 # Modelling Modul Operators
@@ -44,6 +44,9 @@ from .RBT_Toolkit_Operator.RBT_Scale import RBT_Toolkit_Scale_Properties
 
 #Rigging Modul Operators
 from .RBT_Rigging_Script .RBT_Rigging import RBT_OT_Rigging_Transfer_Weight
+from .RBT_Rigging_Script .RBT_Rigging_clean_up import RBT_OT_Rigging_CleanUp
+from .RBT_Rigging_Script .RBT_Rigging_Subdivision import RBT_OT_Rigging_Add_Subdividion
+from .RBT_Rigging_Script .RBT_Rigging_Remove_Tools import RBT_OT_Rigging_Remove
 #=============================================================================#
 
 classes = [
@@ -58,6 +61,7 @@ classes = [
     RBT_PT_Toolkit_Panel,
     RBT_PT_Toolkit_Link_Panel,
     RBT_PT_Scale_panel,
+    RBT_PT_Rigging_Remove_Panel,
     
 
     # Class Modelling Operator 
@@ -76,7 +80,10 @@ classes = [
     RBT_Toolkit_Scale_Properties,
 
     #Class Rigging Operator
-    RBT_OT_Rigging_Transfer_Weight
+    RBT_OT_Rigging_Transfer_Weight,
+    RBT_OT_Rigging_CleanUp,
+    RBT_OT_Rigging_Add_Subdividion,
+    RBT_OT_Rigging_Remove,
 ]
 
 
@@ -97,4 +104,4 @@ def unregister():
 
 if __name__ == "__main__":
     register()
-    # unregister()
+    # unregister() 
