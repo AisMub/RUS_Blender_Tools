@@ -43,20 +43,54 @@ class RBT_PT_Ringging_Panel(bpy.types.Panel):
         row.operator("rigging.add_subdivision_operator")
 
     #========= class Romove==#
-class RBT_PT_Rigging_Remove_Panel(bpy.types.Panel):
-    bl_label = "Remove"
-    bl_idname = "RBT_PT_Remove_panel"
-    bl_space_type = 'VIEW_3D'
-    bl_region_type = 'UI'
-    bl_category = "RBT"
+class RBT_OT_Rigging_Remove( bpy.types.Panel ) :
+    bl_label = "Remove Tools"
+    bl_idname = "rigging.remove_vertex_group"
+    bl_options = {'REGISTER','UNDO'}
     bl_parent_id = "RBT_PT_Ringging"
-
-    def draw (self, context):
+    
+    
+    def draw( self, context ) :
         layout = self.layout
-        layout.scale_y = 1.3
         
-        row = layout.row()
-        row.operator("rigging.remove_vertex_group")
+        box = layout.box()
+        row = box.row()
+        row.scale_y = 1.25
+        row.label( text='', icon='MOD_ARMATURE' )
+        row.operator( "remove.armature" )
+        
+        #box = layout.box()
+        row = box.row()
+        row.scale_y = 1.25
+        row.label( text='', icon='GROUP_VERTEX' )
+        row.operator( "remove.vtx_grp" )
+        
+        #box = layout.box()
+        row = box.row()
+        row.scale_y = 1.25
+        row.label( text='', icon='SHAPEKEY_DATA' )
+        row.operator( "remove.shapekey_data" )
+        
+        #box = layout.box()
+        row = box.row()
+        row.scale_y = 1.25
+        row.label( text='', icon='ANIM_DATA' )
+        row.operator( "remove.anim_data" )
+
+# class RBT_PT_Rigging_Remove_Panel(bpy.types.Panel):
+#     bl_label = "Remove"
+#     bl_idname = "RBT_PT_Remove_panel"
+#     bl_space_type = 'VIEW_3D'
+#     bl_region_type = 'UI'
+#     bl_category = "RBT"
+#     
+
+#     def draw (self, context):
+#         layout = self.layout
+#         layout.scale_y = 1.3
+        
+#         row = layout.row()
+#         row.operator("rigging.remove_vertex_group")
 
       
 # ========== Layout ==========#        

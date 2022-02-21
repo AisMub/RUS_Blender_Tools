@@ -1,55 +1,5 @@
 import bpy      
 
-bl_info = {
-    "name": "Remove",
-    "author": "km",
-    "version": (1, 0),
-    "blender": (2, 92, 0),
-    "location": "View3D > Toolshelf",
-    "description": "for remove some data object",
-    "warning": "",
-    "doc_url": "",
-    "category": "Remove_Data",
-}
-
-
-class RBT_OT_Rigging_Remove( bpy.types.Panel ) :
-    bl_label = "Remove Tools"
-    bl_idname = "rigging.remove_vertex_group"
-    bl_options = {'REGISTER','UNDO'}
-    #bl_parent_id = isiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii ke panel rigging
-    
-    
-    def draw( self, context ) :
-        layout = self.layout
-        
-        box = layout.box()
-        row = box.row()
-        row.scale_y = 1.25
-        row.label( text='', icon='MOD_ARMATURE' )
-        row.operator( "remove.armature" )
-        
-        #box = layout.box()
-        row = box.row()
-        row.scale_y = 1.25
-        row.label( text='', icon='GROUP_VERTEX' )
-        row.operator( "remove.vtx_grp" )
-        
-        #box = layout.box()
-        row = box.row()
-        row.scale_y = 1.25
-        row.label( text='', icon='SHAPEKEY_DATA' )
-        row.operator( "remove.shapekey_data" )
-        
-        #box = layout.box()
-        row = box.row()
-        row.scale_y = 1.25
-        row.label( text='', icon='ANIM_DATA' )
-        row.operator( "remove.anim_data" )
-        
-
-
-
 # remove armature
 class Remove_Armature( bpy.types.Operator ) :
     """ Remove Armature Selected Objects """
